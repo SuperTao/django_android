@@ -1,0 +1,31 @@
+from django.shortcuts import render
+
+from django.http import HttpResponse
+
+from info.models import time
+
+
+def index(request):
+    count = 0
+    if request.method == 'GET':
+        try:
+            t = time.objects.get(id=1)
+            count = request.GET['onoff']
+            t.count = int(count)
+            t.save()
+        except KeyError: 
+            t = time.objects.get(id=1)
+            count = str(t.count)
+        return HttpResponse('onoff '  + count)
+    elif request.method == 'POST':
+        try:
+            t = time.objects.get(id=1)
+            count = request.POST['onoff']
+            t.count = int(count)
+            t.save()
+        except KeyError: 
+            t = time.objects.get(id=1)
+            count = str(t.count)
+        return HttpResponse('onoff '  + count)
+    
+    return render(request, 'index.html')
