@@ -8,12 +8,12 @@ xUtils使用方法：
 
 　　https://github.com/wyouflf/xUtils3
 
-##### django运行
+#### django运行
 --
 
 python manage.py runserver 0.0.0.0:8000
 
-##### 测试运行效果
+#### 测试运行效果
 --
 
 浏览器输入： 192.168.1.249:8000
@@ -24,23 +24,27 @@ python manage.py runserver 0.0.0.0:8000
 
 显示结果：  onoff 100
 
-##### android连接
+### Android连接
 --
 
 程序中使用get或者post方法上传数据。django接受到数据返回给app。并用toast显示出来。
 
-##### mysql测试
+### mysql测试
 --
 
 如果要测试mysql,用info/view.py.mysql覆盖info/view.py
 
+```
 　　cp info/view.py.mysql info/view.py
+```
 
 将aplex/onoff.mysql导入到自己电脑安装的mysql数据库。数据库名称是onoff,只添加了一张表time,如下所示：
 
 导入方法：
 
+```
 　　mysql -u root -p school < onoff.sql
+```
 
 查看方法：
 
@@ -79,7 +83,7 @@ mysql> select * from info_time
 2 rows in set (0.00 sec)
 ```
 
-##### 问题记录
+### 问题记录
 --
 
 android使用post方法时，连接错误。
