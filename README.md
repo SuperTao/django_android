@@ -8,12 +8,12 @@ xUtils使用方法：
 
 　　https://github.com/wyouflf/xUtils3
 
-#### django运行
+### django运行
 --
 
 python manage.py runserver 0.0.0.0:8000
 
-#### 测试运行效果
+### 测试运行效果
 --
 
 浏览器输入： 192.168.1.249:8000
@@ -40,13 +40,13 @@ python manage.py runserver 0.0.0.0:8000
 
 将aplex/onoff.mysql导入到自己电脑安装的mysql数据库。数据库名称是onoff,只添加了一张表time,如下所示：
 
-导入方法：
+导入：
 
 ```
 　　mysql -u root -p school < onoff.sql
 ```
 
-查看方法：
+查看：
 
 ```
 mysql> use onoff;
